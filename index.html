@@ -40,16 +40,16 @@
             border-radius: 5px;
             background-color: whitesmoke;
         }
-           .input[type=submit] 
+           #man 
         {
             background-color: silver;
             margin: auto;
-            width: 100px;
-            height: 40px;
+            width: 70px;
+            /* height: 80px; */
             border-radius: 5px;
             font-weight: bolder;
             text-align: center;
-            line-height: 40px;
+            /* line-height: 40px; */
             text-decoration: none;
             color: black;
         }
@@ -71,7 +71,7 @@
                 <input type='checkbox'class='check-box'>
                 <br>
                      <!-- <a href="./player.html" id="button" value="click" onclick="passvalues(); " >Enter</a> -->
-                     <input type="submit" value="click me!"  onclick="passvalues();">
+                     <input id="man" type="submit" value="Enter"  onclick="passvalues();">
                 </form>
          
          </div>
@@ -81,8 +81,14 @@
  <script >
      function passvalues()
      {
+
         var firstname=document.getElementById("p11") .value;
         var secondname=document.getElementById("p22").value;
+
+        if(firstname=="" || secondname==""){
+            alert("Field should not be empty");
+        }
+
         localStorage.setItem("textvalue",firstname,"textvalue2",secondname);
          localStorage.setItem("textvalue2",secondname);
         return false;
